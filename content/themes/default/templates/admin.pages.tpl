@@ -412,7 +412,7 @@
                     var form_data = new FormData();                  
                     form_data.append('file', file_obj);
                     var xhttp = new XMLHttpRequest();
-                    xhttp.open("POST", "/includes/ajax/data/upload.php", true);
+                    xhttp.open("POST", "includes/ajax/data/upload.php", true);
                     xhttp.onload = function(event) {
                         oOutput = document.querySelector('.img-content');
                         if (xhttp.status == 200) {
