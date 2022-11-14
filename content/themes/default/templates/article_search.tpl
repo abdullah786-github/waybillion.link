@@ -144,7 +144,11 @@
             {/if}-->
           </ul>
           <!-- panel nav -->
+{if count($results) >= 10}
 <h5>Showing 10 posts from {count($results)}</h5>
+{else}
+<h5>Showing {count($results)} posts from {count($results)}</h5>
+{/if}
           <div class="tab-content">
 
             <div class="blogs-wrapper">
