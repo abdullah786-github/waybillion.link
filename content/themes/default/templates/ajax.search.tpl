@@ -3,7 +3,7 @@
     {foreach $results as $result}
       {if $result['type'] == "user"}
         {*{include file='__feeds_user.tpl' _user=$result _tpl="list" _connection=$result['connection'] _search=true}*}
-
+ 
       {elseif $result['type'] == "page"}
         {include file='__feeds_page.tpl' _page=$result _tpl="list" _search=true}
 
