@@ -3,7 +3,7 @@
     <div class="search-input-icon">
       <i class="fa fa-search"></i>
     </div>
-    <input id="search-input" type="text" class="form-control" placeholder='{__("Search")}' autocomplete="off">
+    <input id="search-input" type="text" class="form-control" placeholder='{__("Searchs")}' autocomplete="off">
     <div id="search-results" class="dropdown-menu dropdown-widget dropdown-search js_dropdown-keepopen">
       <div class="dropdown-widget-header">
         <span class="title">{__("Search Results")}</span>
