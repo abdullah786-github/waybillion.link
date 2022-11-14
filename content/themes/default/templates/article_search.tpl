@@ -42,6 +42,9 @@
     margin: 0px 16px;
     border-bottom: 1px solid #00000026;
 }
+.col-lg-4 .post-body:last-child{
+  border-bottom: 0px solid #00000026;
+}
 </style>
 <!-- page header -->
 <div class="page-header">
