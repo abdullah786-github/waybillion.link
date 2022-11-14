@@ -187,6 +187,11 @@
             <i class="fa fa-info-circle fa-fw mr5"></i><strong>{__("Page Info")}</strong>
           </a>
         </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#branding_for_images" data-toggle="tab">
+            <i class="fa fa-upload fa-fw mr5"></i><strong>{__("Brand Images")}</strong>
+          </a>
+        </li>
       </ul>
       <!-- tabs nav -->
 
@@ -339,6 +344,111 @@
           </form>
         </div>
         <!-- info tab -->
+        <!-- branding for images -->
+        <div class="tab-pane" id="branding_for_images">
+          <style>
+            #drop_file_zone {
+                background-color: #EEE;
+                border: #4b6fc4 2px dashed;
+                height: 250px;
+                padding: 8px;
+                font-size: 16px;
+                margin: 0 auto;
+                display: flex;
+                align-items: center;
+                position: relative;
+            }
+            #drop_file_zone input[type="button"] {
+              position: absolute;
+              top: 0;
+              bottom: 0;
+              left: 0;
+              right: 0;
+              border: none;
+              background: transparent;
+            }
+            p.errMsg {
+              color: red;
+              margin: 15px 0 0;
+              text-align: center;
+            }
+            #drag_upload_file {
+              width:50%;
+              margin:0 auto;
+            }
+            #drag_upload_file p {
+              text-align: center;
+            }
+            #drag_upload_file #selectfile {
+              display: none;
+            }
+          </style>
+          <div id="drop_file_zone" ondrop="upload_file(event)" ondragover="return false">
+              <div id="drag_upload_file">
+                  <p>Drop/Drop or Browse Your Images Here.</p>
+                  <input type="button" value="" onclick="file_explorer();" />
+                  <input type="file" multiple accept="image/png, image/jpeg" id="selectfile" />
+              </div>
+          </div>
+          <div class="img-content"></div>
+          <script>
+            var fileobj;
+            function upload_file(e) {
+                e.preventDefault();
+                fileobj = e.dataTransfer.files[0];
+                ajax_file_upload(fileobj);
+            }
+              
+            function file_explorer() {
+                document.getElementById('selectfile').click();
+                document.getElementById('selectfile').onchange = function() {
+                    fileobj = document.getElementById('selectfile').files[0];
+                    ajax_file_upload(fileobj);
+                };
+            }
+              
+            function ajax_file_upload(file_obj) {
+                if(file_obj != undefined) {
+                    var form_data = new FormData();                  
+                    form_data.append('file', file_obj);
+                    var xhttp = new XMLHttpRequest();
+                    xhttp.open("POST", "includes/ajax/data/upload.php", true);
+                    xhttp.onload = function(event) {
+                        oOutput = document.querySelector('.img-content');
+                        if (xhttp.status == 200) {
+                            oOutput.innerHTML = "<img src='"+ this.responseText +"' alt='The Image' />";
+                        } else {
+                            oOutput.innerHTML = "<p class='errMsg'>Error " + xhttp.status + " occurred when trying to upload your file.</p>";
+                        }
+                    }
+            
+                    xhttp.send(form_data);
+                }
+            }
+          </script>
+        </div>
+        
+          <php?
+          $arr_file_types = ['image/png', 'image/gif', 'image/jpg', 'image/jpeg'];
+            
+          if (!(in_array($_FILES['file']['type'], $arr_file_types))) {
+              echo "false";
+              return;
+          }
+            
+          if (!file_exists('uploads')) {
+              mkdir('uploads', 0777);
+          }
+            
+          $filename = time().'_'.$_FILES['file']['name'];
+            
+          move_uploaded_file($_FILES['file']['tmp_name'], 'uploads/'.$filename);
+            
+          echo 'uploads/'.$filename;
+          die;
+          ?>
+        
+        <!-- branding for images -->
       </div>
       <!-- tabs content -->
     </div>

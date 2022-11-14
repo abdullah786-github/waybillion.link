@@ -411,7 +411,7 @@ input:checked + .slider:before {
                       <!-- article cover video -->
                       {if $article['article']['cover_video']}
                         <div class="mb20">
-                            <iframe class="cover-video" width="560" height="315" src="{$article['article']['cover_video']}" title="{$article['article']['title']}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                            <iframe class="cover-video" width="100%" height="315" src="{$article['article']['cover_video']}" title="{$article['article']['title']}" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                         </div>
                       {/if}
                       <!-- article cover video -->
