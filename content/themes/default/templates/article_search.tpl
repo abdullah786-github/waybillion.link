@@ -1,10 +1,9 @@
 {include file='_head.tpl'}
 {include file='_header.tpl'}
 <style>
-.col-lg-4 .post-replace, .col-lg-4 .post-media-image, .col-lg-4 .post-stats, .col-lg-4 .post-footer, .col-lg-4 .js_user-popover, .col-lg-4 .post-title, .col-lg-4 .post-actions.clearfix {
+.col-lg-4 .post-replace, .col-lg-4 .post-media-image, .col-lg-4 .post-stats, .col-lg-4 .post-footer, .col-lg-4 .js_user-popover, .col-lg-4 .post-title, .col-lg-4 .post-actions.clearfix, .abcd {
     display: none;
 }
-
 </style>
 <!-- page header -->
 <div class="page-header">
