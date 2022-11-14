@@ -33,6 +33,7 @@
 .col-lg-4 .post {
     background: #fff;
     margin-bottom: 0px;
+    box-shadow: none;
     }
 </style>
 <!-- page header -->
