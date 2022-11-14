@@ -347,6 +347,7 @@
         <!-- branding for images -->
         <div class="tab-pane" id="branding_for_images">
           <style>
+          
             #drop_file_zone {
                 background-color: #EEE;
                 border: #4b6fc4 2px dashed;
