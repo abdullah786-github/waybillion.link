@@ -48,7 +48,7 @@
 .col-lg-4  .post-media-meta {
     padding: 0px 15px 15px;
     }
-</style>
+</style> 
 <!-- page header -->
 <div class="page-header">
   <img class="floating-img d-none d-md-block" src="{$system['system_url']}/content/themes/{$system['theme']}/images/headers/undraw_file_searching_duff.svg">
