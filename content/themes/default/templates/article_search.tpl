@@ -45,6 +45,9 @@
 .col-lg-4 .post-body:last-child{
   border-bottom: 0px solid #00000026;
 }
+.col-lg-4  .post-media-meta {
+    padding: 0px 15px 15px;
+    }
 </style>
 <!-- page header -->
 <div class="page-header">
