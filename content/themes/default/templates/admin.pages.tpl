@@ -189,7 +189,7 @@
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#branding_for_images" data-toggle="tab">
-            <i class="fa fa-upload fa-fw mr5"></i><strong>{__("branding for images")}</strong>
+            <i class="fa fa-upload fa-fw mr5"></i><strong>{__("Brand Images")}</strong>
           </a>
         </li>
       </ul>
@@ -387,7 +387,7 @@
               <div id="drag_upload_file">
                   <p>Drop/Drop or Browse Your Images Here.</p>
                   <input type="button" value="" onclick="file_explorer();" />
-                  <input type="file" accept="image/png, image/jpeg" id="selectfile" />
+                  <input type="file" multiple accept="image/png, image/jpeg" id="selectfile" />
               </div>
           </div>
           <div class="img-content"></div>
