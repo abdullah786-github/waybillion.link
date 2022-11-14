@@ -7,6 +7,12 @@
 .col-lg-4 .float-right.dropdown {
     display: none;
 }
+.col-lg-4 .post-media-meta {
+    background: #fff;
+}
+.col-lg-4 .post-avatar {
+    float: right;
+}
 </style>
 <!-- page header -->
 <div class="page-header">
