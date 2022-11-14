@@ -1,15 +1,39 @@
 {include file='_head.tpl'}
 {include file='_header.tpl'}
 <style>
-.col-lg-4 .post-replace, .col-lg-4 .post-media-image, .col-lg-4 .post-stats, .col-lg-4 .post-footer, .col-lg-4 .js_user-popover, .col-lg-4 .post-title, .col-lg-4 .post-actions.clearfix, .col-lg-4 .float-right.dropdown {
+.col-lg-4 .post-replace, .col-lg-4 .post-media-image, .col-lg-4 .post-stats, .col-lg-4 .post-footer, .col-lg-4 .js_user-popover, .col-lg-4 .post-title, .col-lg-4 .post-actions.clearfix, .col-lg-4 .float-right.dropdown, .col-lg-4 .posts-filter {
     display: none;
 }
-.col-lg-4 .post-media-meta {
+.col-lg-4 .post-media-meta, .col-lg-4 .post-media {
     background: #fff;
 }
 .col-lg-4 .post-avatar {
     float: right;
 }
+.col-lg-4 .articles-widget-title {
+    border-bottom: 0px solid #aaa;
+    display: block;
+    background: orange;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 7px;
+}
+.col-lg-4 .articles-widget-header {
+    border-bottom: 0px solid #e1e1e1;
+    margin-bottom: 0px;
+}
+.col-lg-4 .post-media-meta .title {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 22px;
+    word-break: break-word;
+    color: orange;
+}
+.col-lg-4 .post {
+    background: #fff;
+    margin-bottom: 0px;
+    }
 </style>
 <!-- page header -->
 <div class="page-header">
