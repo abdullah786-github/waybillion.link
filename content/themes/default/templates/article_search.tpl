@@ -35,6 +35,13 @@
     margin-bottom: 0px;
     box-shadow: none;
     }
+    .col-lg-4 a.post_text_custom {
+    color: var(--link-color);
+}
+.col-lg-4 .post-body {
+    margin: 0px 16px;
+    border-bottom: 1px solid #00000026;
+}
 </style>
 <!-- page header -->
 <div class="page-header">
